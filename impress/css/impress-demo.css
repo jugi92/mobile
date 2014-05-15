@@ -57,9 +57,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+
 blockquote, q {
     quotes: none;
 }
@@ -241,14 +239,30 @@ a:focus {
 }
 
 .green {
-	color: #80bd01;
+	/*color: #80bd01;*/
+	color: #7EB473;
 }
 
-ul {
-	list-style-type: disc;
+ol,ul {
+	list-style-position:inside;
 }
 
-.heading{
+img.limit {
+	width:100%;
+	height: 100%;
+}
+
+.border {
+	border-style: solid;
+	border-width: 3px;
+}
+
+.logo {
+	height: 80px;
+	margin: 2.5px;
+}
+
+h1{
 	font-size: 48px;
 }
 
