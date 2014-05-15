@@ -179,24 +179,85 @@
     -->
     <div id="title" class="step" data-x="0" data-y="0" style="font-size:60pt">
 		<img src="nodejs-logo-dark2.png" width="400px" height="100%" style="margin-bottom:-9px">
-		und 
+		and 
 		<img src="npm.png" width="300px" height="100%" style="margin-top:9px; margin-left:60px">
 		<img class="node" src="node2.png">
 		<hr noshade size="3" style="background:-webkit-gradient(linear, left center, right center,color-stop(0, white),color-stop(0.7, transparent));border-width:0">
-		<p style="font-size:20pt;margin-top:-30px">Eine Präsentation von <span class="green">Julian Gimbel</span> und <span class="green">Robert Pinsler</span></p>
+		<p style="font-size:20pt;margin-top:-30px">A presentation of <span class="green">Julian Gimbel</span> and <span class="green">Robert Pinsler</span></p>
 	</div>
-	
-	
-    <div class="step" data-x="-1000" data-y="-1500">
+    <div class="step" data-x="-2000" data-y="-1500">
 		<div style="width: 883px; height: 633px; overflow: hidden;">
 			<iframe src="http://www.nodejs.org" seamless width="900px" height="650px"></iframe>
 		</div>
     </div>
 	
+	
+	<div class="step" data-x="-2000" data-y="-1500">
+	<ul>
+	<li>JavaScript has place 9 in the <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">TIOBE list</a> of popular programming languages</li>
+	<li>Born for the manipulation of DOM elements in Netscape 1995</li>
+	<li>Server side JavaScript(SSJS) introduced soon after</li>
+    </ul>
+	</div>
+	
+	<div class="step" data-x="-2000" data-y="-1500">
+	<ul>
+	<li>Lack of acceptance as programming language until mid 2000s</li>
+	<li>node.js with new concept and biggest and fastest growing community acceptance</li>
+	<li>Alternatives like Dart or Coffescript in Browsers</li>
+	<li>Alternatives like xsjs for SAP Hana as SSJS </li>
+    </ul>
+	</div>
+	
+	
+	<div class="step" data-x="-1000" data-y="-1500">
+		<p><h1>To make this presentation run</h1></p>
+		<ol>
+		<li>Download <a target="_blank" href="http://nodejs.org/download/">node.js</a></li>
+		<li class="code">npm install http-server -g</li>
+		<li class="code">cd to/presentation/folder</li>
+		<li class="code">http-server</li>
+		<li>Open <a href="localhost:8080">localhost:8080</a></li>
+		</ol>
+    </div>
+	
 	<div class="step" data-x="0" data-y="-1500">
-		<img src="event-loop.png">
+		Requirements of modern web applications
+		<ul>
+		<li>Solve C10K problem</li>
+		<li>Native-like performance</li>
+		<li>Real-time reactivity</li>
+		</ul>
 	</div>
 
+	<div class="step" data-x="1000" data-y="-1500">
+		<span class="heading">What's the bottleneck?</span>
+			<img src="latency-bar-graph.png">
+	</div>
+	
+	<div id="wait" class="step" data-x="2000" data-y="-1500">
+		<span class="heading">"Please <span class="green">wait</span>..."</span>
+		<img id="waiting" src="waiting.png">
+	</div>
+	
+	<div id="thread" class="step" data-x="3000" data-y="-1500">
+		<span class="heading">Multiple threads</span>
+		<img id="threading" src="threads.png">	
+		complex manual synchronisation
+		thread handling overhead
+	</div>
+	
+	<div id="nonblock" class="step" data-x="3000" data-y="-2500" data-rotate="180">
+	<span class="heading">The node.js way</span>
+		<img id="nonblocking" src="nonblockingio.png">
+		<div style="text-align:center"><span class="green">single thread + asynchronous + non-blocking I/O</span></div>
+	</div>
+	
+	
+	<div class="step" data-x="2000" data-y="-2500" data-rotate="180">
+		<span class="heading">Event loop</span>
+		<img src="event-loop.png">
+	</div>
 
     <div class="step" data-x="1000" data-y="-1500">
         <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
@@ -206,14 +267,14 @@
         <img src="npm.png" width="300px" height="100%" style="margin-top:9px; margin-left:60px">
 		<p>Total Packages: 72 825</p>
 		<p>12 228 124 downloads in the last day</p>
-		<p>npm install</p>
-		<p>npm adduser, npm publish</p>
+		<p class="code">npm install</p>
+		<p class="code">npm adduser, npm publish</p>
     </div>
 	
-	<div class="step" data-x="2000" data-y="-1500">
+	<div class="step" data-x="3000" data-y="-1500">
 		<p>Very simple and comfortable debugging with chrome tools:</p>
-		<p>npm install -g node-inspector</p>
-		<p>node-debug test.js</p>
+		<p class="code">npm install -g node-inspector</p>
+		<p class="code">node-debug test.js</p>
     </div>
 	
 	
@@ -339,7 +400,6 @@
 -->
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
-
 <!--
     
     The `impress()` function also gives you access to the API that controls the presentation.

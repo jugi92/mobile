@@ -177,7 +177,7 @@ a:focus {
     box-sizing:         border-box;
 
     font-family: 'PT Serif', georgia, serif;
-    font-size: 48px;
+    font-size: 30px;
     line-height: 1.5;
 }
 
@@ -244,6 +244,14 @@ a:focus {
 	color: #80bd01;
 }
 
+ul {
+	list-style-type: disc;
+}
+
+.heading{
+	font-size: 48px;
+}
+
 .node {
     -webkit-animation: blink 4s;
     -webkit-animation-iteration-count: infinite;
@@ -268,6 +276,11 @@ a:focus {
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
+}
+
+.code {
+	font-family:Lucida Console;
+	background-color: black;
 }
 
 /*
