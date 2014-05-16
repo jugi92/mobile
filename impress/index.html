@@ -53,7 +53,16 @@
 	<ul>
 	<li>JavaScript has place 9 in the <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">TIOBE list</a> of popular programming languages</li>
 	<li>Born for the manipulation of DOM elements in Netscape 1995</li>
-	<li>Server side JavaScript(SSJS) introduced soon after</li>
+	<li>Server side JavaScript(SSJS) introduced soon after in Netscape Livewire</li>
+    </ul>
+	</div>
+	
+	<div class="step" data-x="6000" data-y="1000">
+	<h1 class="green">Why Server side JavaScript?</h1>
+	<ul>
+	<li>Share Code between Server and Browser:</li>
+	<li>Simple case: Data validation in forms</li>
+	<li>Keep thinking in one language through entire stack</li>
     </ul>
 	</div>
 	
@@ -61,13 +70,37 @@
 	<ul>
 	<li>Lack of acceptance as programming language until mid 2000s</li>
 	<li>node.js with new concept and biggest and fastest growing community acceptance</li>
-	<li>Alternatives like Dart or Coffescript in Browsers</li>
-	<li>Alternatives like xsjs for SAP Hana as SSJS </li>
+	<li>Alternatives for JavaScript like Dart or Coffescript in Browsers</li>
+	<li>Alternatives for node.js like xsjs for SAP Hana as SSJS </li>
     </ul>
 	</div>
 	
+	<div class="step" data-x="6000" data-y="-1000">
+	<h1 class="green">Node.js</h1>
+	<ul>
+	<li>published 2009 by Ryan Dahl</li>
+	<li>build on stable architecture like V8 of Chrome</li><!--also on stable libev and libeio!-->
+	<li>Translates JavaScript to byte code => ~performance of C++</li>
+	<li>Platform independent (available for Mac, Windows, Linux)</li>
+    </ul>
+	</div>
+	
+	<div class="step" data-x="7500" data-y="1000">
+		<p><h1 class="green">Hello World</h1></p>
+		<div class="code"><p class="code">
+			<p>var http = require('http');</p>
+			<p>http.createServer(function (req, res) {</p>
+			<p style="padding-left:2em;">	res.writeHead(200, {'Content-Type': 'text/plain'});</p>
+			<p style="padding-left:2em;">	res.end('Hello World\n');</p>
+			<p>}).listen(1337, '127.0.0.1');</p>
+			<p>console.log('Server running at http://127.0.0.1:1337/');</p>
+		</div>
+		<p>Put this into helloworld.js and run</p>
+		<p class="code">node helloworld.js</p>
+    </div>
+	
 	<div class="step" data-x="7500" data-y="0">
-		<p><h1>To make this presentation run</h1></p>
+		<p><h1 class="green">To make this presentation run / Create a http Server</h1></p>
 		<ol>
 		<li>Download <a target="_blank" href="http://nodejs.org/download/">node.js</a></li>
 		<li class="code">npm install http-server -g</li>
