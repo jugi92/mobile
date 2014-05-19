@@ -1,0 +1,1 @@
+This is the repository for our node.js/npm presentation held during the DHBW Mannheim mobile class in Mai 2014.
